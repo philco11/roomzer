@@ -1,0 +1,37 @@
+<h2>New User Second Page</h2>
+So what are you looking for in a roommate?
+
+<%= form_for(@user) do |x| %>
+	<p>
+		<%= x.label :target_beginning_age_range, "People aged from" %>
+		<%= x.text_field :target_beginning_age_range %>
+		
+		<%= x.label :target_ending_age_range, "to" %>
+		<%= x.text_field :target_ending_age_range %><br /></br>
+		
+		<%= x.label :target_income_beginning_range, "People who make between" %>
+		<%= x.text_field :target_income_beginning_range %>
+		
+		<%= x.label :target_income_ending_range, "and" %>
+		<%= x.text_field :target_income_ending_range %>
+	
+		<%= x.label :target_cleanliness, "How clean do you want your roommate(s) to be?" %>
+		<%= x.select :target_cleanliness, options_for_select([["Military Inspection Clean.", "Military clean"], ["Not a neat freak, but definitely clean", "Kinda clean"], ["They can be a lil' messy", "kinda messy"], ["Doesn't matter to me", "messy"]]) %></br></br>
+		
+		<%= x.label :target_pets, "Are you open to your roommate having pets?" %>
+		<%= x.select :target_pets, options_for_select([["They can have a dog", "dog"], ["They can have a cat", "have a cat"], ["They can have any pets", "other pet"], ["No pets please", "no pets"]]) %> </br>
+		
+		<%= x.label :target_moving_date_beginning_range, "My targeted move date is" %>
+		<%= x.text_field :target_moving_date_beginning_range %>
+
+		<%= x.label :target_moving_date_ending_range, "and" %>
+		<%= x.text_field :target_moving_date_ending_range %>
+	
+		<%= x.submit user: "new_user_path" %>
+		
+		
+	<% end %>
+	
+	
+
+   

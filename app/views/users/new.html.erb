@@ -1,0 +1,23 @@
+<h2>New User</h2>
+Tell us a bit about yourself...
+
+<%= form_for(@user) do |x| %>
+	<p>
+		<%= x.label :first_name, "First Name" %>
+		<%= x.text_field :first_name %></br>
+		
+		<%= x.label :last_name, "Last Name" %>
+		<%= x.text_field :last_name %><br /></br>
+		
+		<%= x.label :gender, "Gender" %>
+		<%= x.select :gender, options_for_select([["Male", "male"], ["Female", "female"]]) %></br></br>
+	
+		<%= x.label :cleanliness, "How Clean Are You?" %>
+		<%= x.select :cleanliness, options_for_select([["Military Inspection Clean.", "MIC"], ["Not a neat freak, bu definitely clean", "Kinda clean"], ["I'm a lil' messy", "kinda messy"], ["Not gonna lie, I'm pretty messy", "messy"]]) %></br></br>
+		
+		<%= x.label :pets, "Do you have any pets?" %>
+		<%= x.select :pets, options_for_select([["Have a dog", "dog"], ["Have a cat", "have a cat"], ["Other Pet, but it's not a snake, I swear", "other pet"], ["Don't have any pets"]]) %> </br>
+	
+		<%= x.submit user: "new_user_path" %>
+	<% end %>
+		
