@@ -11,20 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130323071235) do
-
-  create_table "add_target_cleanliness_to_users", :force => true do |t|
-    t.string   "target_cleanliness"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
-  end
-
-  create_table "add_target_moving_date_range_to_users", :force => true do |t|
-    t.date     "target_moving_date_beginning_range"
-    t.date     "target_moving_date_ending_range"
-    t.datetime "created_at",                         :null => false
-    t.datetime "updated_at",                         :null => false
-  end
+ActiveRecord::Schema.define(:version => 20130323073240) do
 
   create_table "users", :force => true do |t|
     t.string   "first_name"
@@ -43,6 +30,9 @@ ActiveRecord::Schema.define(:version => 20130323071235) do
     t.string   "kinda_messy"
     t.string   "messy"
     t.string   "target_pets"
+    t.string   "target_cleanliness"
+    t.date     "target_beginning_date_range"
+    t.date     "target_ending_date_range"
   end
 
 end

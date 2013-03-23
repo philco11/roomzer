@@ -19,13 +19,13 @@ So what are you looking for in a roommate?
 		<%= x.select :target_cleanliness, options_for_select([["Military Inspection Clean.", "Military clean"], ["Not a neat freak, but definitely clean", "Kinda clean"], ["They can be a lil' messy", "kinda messy"], ["Doesn't matter to me", "messy"]]) %></br></br>
 		
 		<%= x.label :target_pets, "Are you open to your roommate having pets?" %>
-		<%= x.select :target_pets, options_for_select([["They can have a dog", "dog"], ["They can have a cat", "have a cat"], ["They can have any pets", "other pet"], ["No pets please", "no pets"]]) %> </br>
+		<%= x.select :target_pets, options_for_select([["They can have a dog", "dog"], ["They can have a cat", "have a cat"], ["They can have any pets", "other pet"], ["No pets please", "no pets"]]) %> </br></br>
 		
-		<%= x.label :target_moving_date_beginning_range, "My targeted move date is" %>
-		<%= x.text_field :target_moving_date_beginning_range %>
+		<%= x.label :target_beginning_date_range, "My targeted move date is" %>
+		<%= x.text_field :target_beginning_date_range %>
 
-		<%= x.label :target_moving_date_ending_range, "and" %>
-		<%= x.text_field :target_moving_date_ending_range %>
+		<%= x.label :target_ending_date_range, "and" %>
+		<%= x.text_field :target_ending_date_range %></br>
 	
 		<%= x.submit user: "new_user_path" %>
 		
@@ -34,4 +34,4 @@ So what are you looking for in a roommate?
 	
 	
 
-   
+   †
